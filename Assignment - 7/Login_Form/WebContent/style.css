@@ -1,0 +1,77 @@
+/* Background */
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+}
+
+/* Card Box */
+.card{
+    background:white;
+    padding:35px;
+    width:320px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+    animation:fade 0.6s ease;
+}
+
+/* Title */
+.card h2{
+    margin-bottom:20px;
+    color:#444;
+}
+
+/* Inputs */
+input, textarea{
+    width:90%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:10px;
+    border:1px solid #ddd;
+    outline:none;
+    transition:0.3s;
+    font-size:14px;
+}
+
+/* Input focus effect */
+input:focus, textarea:focus{
+    border-color:#667eea;
+    box-shadow:0 0 5px rgba(102,126,234,0.5);
+}
+
+/* Button */
+button{
+    width:95%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#667eea,#764ba2);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Button hover */
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Success text */
+h3{
+    color:#28a745;
+}
+
+/* Animation */
+@keyframes fade{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
