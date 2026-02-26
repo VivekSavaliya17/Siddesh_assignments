@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Dashboard</title>
+
+    <style>
+        body{
+            font-family: Verdana;
+            background:#eef2ff;
+            padding:30px;
+        }
+
+        h1{
+            color:#1a237e;
+        }
+
+        table{
+            border-collapse: collapse;
+            background:white;
+            width:350px;
+            margin-bottom:20px;
+        }
+
+        th, td{
+            border:1px solid #ccc;
+            padding:10px;
+            text-align:left;
+        }
+
+        th{
+            background:#3f51b5;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Sales Report</h1>
+
+<table>
+    <tr>
+        <th>Total Revenue</th>
+        <td>₹ {{ sales }}</td>
+    </tr>
+    <tr>
+        <th>Number of Orders</th>
+        <td>{{ orders }}</td>
+    </tr>
+</table>
+
+<h3>Best Selling Products</h3>
+<ul>
+{% for name,count in products.items() %}
+    <li>{{ name }} : {{ count }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
